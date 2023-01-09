@@ -1,11 +1,13 @@
 package com.example.androidarchitechture2
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import androidx.databinding.DataBindingUtil
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
+import com.example.androidarchitechture2.bindingAdapter.MainBindingAdapter
 import com.example.androidarchitechture2.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
@@ -23,5 +25,9 @@ class MainActivity : AppCompatActivity() {
         // Observer change in live data for this binding
         dataBinding.lifecycleOwner = this
 
+    }
+
+    fun bindingAdapter(view: View) {
+        startActivity(Intent(this, MainBindingAdapter::class.java))
     }
 }

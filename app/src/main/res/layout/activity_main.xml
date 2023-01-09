@@ -45,6 +45,13 @@
             android:layout_below="@+id/text"
             android:layout_height="wrap_content"/>
 
+        <Button
+            android:layout_width="wrap_content"
+            android:onClick="bindingAdapter"
+            android:layout_marginTop="20sp"
+            android:text="Binding Adapter"
+            android:layout_height="wrap_content"/>
+
 
     </RelativeLayout>
 </layout>
