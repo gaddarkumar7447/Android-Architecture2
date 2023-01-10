@@ -10,6 +10,7 @@ import androidx.room.Room
 import com.example.androidarchitechture2.R
 import com.example.androidarchitechture2.databinding.ActivityRoomBinding
 import kotlinx.coroutines.*
+import java.util.*
 
 class RoomActivity : AppCompatActivity() {
     private lateinit var roomDataBinding : ActivityRoomBinding
@@ -21,12 +22,11 @@ class RoomActivity : AppCompatActivity() {
 
         database = Room.databaseBuilder(applicationContext,ContactDatabase::class.java,"contactDB").build()
 
-        val contact = Contact(0,"Gaddar","7564078124")
+        val contact = Contact(0,"Gaddar","7564078124", Date())
 
         MainScope().launch {
             database.contactDao().insertContact(contact)
         }
-
     }
 
     fun updateData(view: View) {
