@@ -10,6 +10,7 @@ import androidx.lifecycle.ViewModelProvider
 import com.example.androidarchitechture2.MVVM.MvvmMain
 import com.example.androidarchitechture2.bindingAdapter.MainBindingAdapter
 import com.example.androidarchitechture2.databinding.ActivityMainBinding
+import com.example.androidarchitechture2.roomdatabase.RoomActivity
 
 class MainActivity : AppCompatActivity() {
     lateinit var dataBinding : ActivityMainBinding
@@ -33,4 +34,5 @@ class MainActivity : AppCompatActivity() {
     }
 
     fun mvvmActivity(view: View) { startActivity(Intent(this, MvvmMain::class.java))}
+    fun roomActivity(view: View) {startActivity(Intent(this, RoomActivity::class.java))}
 }
