@@ -5,15 +5,39 @@
 
     <data>
 
+        <variable
+            name="quotes"
+            type="String" />
+
     </data>
 
-    <RelativeLayout
+    <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="#e9e9e9"
         tools:context=".MVVM.MvvmMain">
 
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:layout_height="match_parent">
 
+            <Button
+                android:layout_width="match_parent"
+                android:id="@+id/btnAddQuote"
+                android:text="Add Quote"
+                android:layout_margin="32dp"
+                android:layout_height="wrap_content"/>
 
-    </RelativeLayout>
+            <TextView
+                android:layout_width="match_parent"
+                android:padding="32dp"
+                android:layout_margin="10sp"
+                android:textColor="@color/black"
+                android:text="@{quotes}"
+                android:layout_height="wrap_content"/>
+
+        </LinearLayout>
+
+    </ScrollView>
 </layout>

@@ -1,6 +1,5 @@
 package com.example.androidarchitechture2.roomdatabase
 
-import android.app.PictureInPictureParams
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
@@ -29,7 +28,6 @@ class RoomActivity : AppCompatActivity() {
         }
 
         database = Room.databaseBuilder(applicationContext,ContactDatabase::class.java,"contactDB").addMigrations(migration).build()
-
 
         val contact = Contact(0,"Gaddar","7564078124", Date(),1)
 

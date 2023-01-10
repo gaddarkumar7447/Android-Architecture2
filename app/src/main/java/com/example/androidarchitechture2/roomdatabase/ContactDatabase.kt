@@ -1,10 +1,7 @@
 package com.example.androidarchitechture2.roomdatabase
 
-
 import androidx.room.Database
-import androidx.room.Room
 import androidx.room.RoomDatabase
-import androidx.room.TypeConverter
 import androidx.room.TypeConverters
 
 @Database(entities = [Contact::class], version = 2)
@@ -12,5 +9,4 @@ import androidx.room.TypeConverters
 abstract class ContactDatabase : RoomDatabase() {
 
     abstract fun contactDao(): ContactDAO
-
 }
