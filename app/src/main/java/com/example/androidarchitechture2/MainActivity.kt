@@ -7,6 +7,7 @@ import android.view.View
 import androidx.databinding.DataBindingUtil
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
+import com.example.androidarchitechture2.MVVM.MvvmMain
 import com.example.androidarchitechture2.bindingAdapter.MainBindingAdapter
 import com.example.androidarchitechture2.databinding.ActivityMainBinding
 
@@ -30,4 +31,6 @@ class MainActivity : AppCompatActivity() {
     fun bindingAdapter(view: View) {
         startActivity(Intent(this, MainBindingAdapter::class.java))
     }
+
+    fun mvvmActivity(view: View) { startActivity(Intent(this, MvvmMain::class.java))}
 }

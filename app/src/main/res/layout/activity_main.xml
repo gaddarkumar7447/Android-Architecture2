@@ -50,7 +50,17 @@
             android:onClick="bindingAdapter"
             android:layout_marginTop="20sp"
             android:text="Binding Adapter"
+            android:id="@+id/buttonPanel"
             android:layout_height="wrap_content"/>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_below="@+id/buttonPanel"
+            android:layout_marginTop="20sp"
+            android:text="MVVM"
+            android:onClick="mvvmActivity"
+            android:layout_height="wrap_content"/>
+
 
 
     </RelativeLayout>
