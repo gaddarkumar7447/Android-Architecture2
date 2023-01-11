@@ -1,6 +1,5 @@
 package com.example.androidarchitechture2.diffutil
 
-import android.content.Context
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -40,7 +39,5 @@ class ProgrammingAdapter : ListAdapter<ProgrammingItem, ProgrammingAdapter.Progr
         override fun areContentsTheSame(oldItem: ProgrammingItem, newItem: ProgrammingItem): Boolean {
             return oldItem == newItem
         }
-
     }
-
 }

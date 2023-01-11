@@ -5,12 +5,12 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import androidx.databinding.DataBindingUtil
-import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
-import com.example.androidarchitechture2.MVVM.MvvmMain
+import com.example.androidarchitechture2.mvvm.MvvmMain
 import com.example.androidarchitechture2.bindingAdapter.MainBindingAdapter
 import com.example.androidarchitechture2.databinding.ActivityMainBinding
 import com.example.androidarchitechture2.diffutil.DiffUtilMain
+import com.example.androidarchitechture2.retrofit.RetrofitMain
 import com.example.androidarchitechture2.roomdatabase.RoomActivity
 
 class MainActivity : AppCompatActivity() {
@@ -34,4 +34,5 @@ class MainActivity : AppCompatActivity() {
     fun mvvmActivity(view: View) { startActivity(Intent(this, MvvmMain::class.java))}
     fun roomActivity(view: View) {startActivity(Intent(this, RoomActivity::class.java))}
     fun diffUtil(view: View) {startActivity(Intent(this, DiffUtilMain::class.java))}
+    fun Retrofit(view: View) {startActivity(Intent(this, RetrofitMain::class.java))}
 }

@@ -1,4 +1,4 @@
-package com.example.androidarchitechture2.MVVM
+package com.example.androidarchitechture2.mvvm
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
