@@ -67,8 +67,19 @@
             android:layout_below="@+id/kktm"
             android:layout_marginTop="20sp"
             android:text="Room"
+            android:id="@+id/room"
             android:onClick="roomActivity"
             android:layout_height="wrap_content"/>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_below="@+id/room"
+            android:layout_marginTop="20sp"
+            android:text="Diff Util"
+            android:onClick="diffUtil"
+            android:layout_height="wrap_content"/>
+
+
 
 
 

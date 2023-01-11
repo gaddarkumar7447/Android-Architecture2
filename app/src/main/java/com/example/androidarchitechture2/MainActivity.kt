@@ -10,6 +10,7 @@ import androidx.lifecycle.ViewModelProvider
 import com.example.androidarchitechture2.MVVM.MvvmMain
 import com.example.androidarchitechture2.bindingAdapter.MainBindingAdapter
 import com.example.androidarchitechture2.databinding.ActivityMainBinding
+import com.example.androidarchitechture2.diffutil.DiffUtilMain
 import com.example.androidarchitechture2.roomdatabase.RoomActivity
 
 class MainActivity : AppCompatActivity() {
@@ -29,10 +30,8 @@ class MainActivity : AppCompatActivity() {
 
     }
 
-    fun bindingAdapter(view: View) {
-        startActivity(Intent(this, MainBindingAdapter::class.java))
-    }
-
+    fun bindingAdapter(view: View) { startActivity(Intent(this, MainBindingAdapter::class.java)) }
     fun mvvmActivity(view: View) { startActivity(Intent(this, MvvmMain::class.java))}
     fun roomActivity(view: View) {startActivity(Intent(this, RoomActivity::class.java))}
+    fun diffUtil(view: View) {startActivity(Intent(this, DiffUtilMain::class.java))}
 }
