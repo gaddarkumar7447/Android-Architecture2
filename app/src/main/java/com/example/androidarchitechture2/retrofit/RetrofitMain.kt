@@ -14,7 +14,7 @@ class RetrofitMain : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         dataBinding = DataBindingUtil.setContentView(this, R.layout.activity_retrofit_main)
-
+        supportActionBar?.hide()
         /*val retrofitInstance = RetrofitHelper.getInstance().create(QuotesApi::class.java)
         MainScope().launch {
             val result = retrofitInstance.getQuotes(1)
@@ -30,17 +30,22 @@ class RetrofitMain : AppCompatActivity() {
         }*/
 
         var page = 1
-        dataBinding.submit.setOnClickListener(View.OnClickListener {
-            page = dataBinding.page.text.toString().toInt()
+        if (page==1){
             val adapter = ShowQuoteAdapter(this, page)
             dataBinding.recyclerView1.layoutManager = LinearLayoutManager(this)
             dataBinding.recyclerView1.hasFixedSize()
             dataBinding.recyclerView1.adapter = adapter
+        }
 
+        dataBinding.submit.setOnClickListener(View.OnClickListener {
+            page = dataBinding.page.text.toString().toInt()
+            if (page in 1 ..130){
+                val adapter = ShowQuoteAdapter(this, page)
+                dataBinding.recyclerView1.layoutManager = LinearLayoutManager(this)
+                dataBinding.recyclerView1.hasFixedSize()
+                dataBinding.recyclerView1.adapter = adapter
+            }
         })
-
-
-
 
     }
 

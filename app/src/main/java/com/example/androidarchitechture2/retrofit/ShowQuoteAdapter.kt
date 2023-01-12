@@ -11,8 +11,7 @@ import kotlinx.coroutines.MainScope
 import kotlinx.coroutines.launch
 
 class ShowQuoteAdapter(val context: Context, private val page : Int) : RecyclerView.Adapter<ShowQuoteAdapter.ViewHolder>() {
-    val res: QuotesApi = RetrofitHelper.getInstance().create(QuotesApi::class.java)
-
+    val res : QuotesApi = RetrofitHelper.getInstance().create(QuotesApi::class.java)
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         return ViewHolder(LayoutInflater.from(context).inflate(R.layout.retrofitquote, parent, false))

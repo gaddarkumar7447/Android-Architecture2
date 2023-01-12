@@ -16,7 +16,7 @@ class MainBindingAdapter : AppCompatActivity() {
         mainBinding = DataBindingUtil.setContentView(this, R.layout.activity_main_binding_adapter)
         supportActionBar?.hide()
 
-        val post = PostAdapter("Gaddar", "This is a software engineer", "https://secure.gravatar.com/avatar/e89584fc717a92922689cb33ab29dd93?s=160&d=https%3A%2F%2Fcss-tricks.com%2Fimages%2Fget-gravatar.png&r=PG")
+        val post = PostAdapter("Gaddar", "This is a software engineer", "https://instagram.fixb2-1.fna.fbcdn.net/v/t51.2885-19/322327737_179498298006458_4585926227345056937_n.jpg?stp=dst-jpg_s320x320&_nc_ht=instagram.fixb2-1.fna.fbcdn.net&_nc_cat=102&_nc_ohc=iNqs2bTMxpEAX-Nbn1J&edm=AOQ1c0wBAAAA&ccb=7-5&oh=00_AfB3tqevpiNzJqdQwvKMPa5bsDvMdQbmFj3QRT-mweWnSQ&oe=63C5615D&_nc_sid=8fd12b")
         mainBinding.post = post
     }
 }

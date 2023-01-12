@@ -14,7 +14,6 @@
             android:id="@+id/content"
             android:textColor="@color/black"
             android:textSize="15dp"
-            android:text="Gaddar Kumar chaudhary"
             android:layout_height="wrap_content"/>
 
         <TextView
@@ -23,7 +22,6 @@
             android:layout_marginTop="3dp"
             android:textColor="@color/black"
             android:textSize="15dp"
-            android:text="Gaddar"
             android:textStyle="bold"
             android:layout_height="wrap_content"/>
 

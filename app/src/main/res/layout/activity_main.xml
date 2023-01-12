@@ -85,11 +85,17 @@
             android:layout_below="@+id/diff"
             android:layout_marginTop="20sp"
             android:text="Retrofit"
-            android:onClick="Retrofit"
+            android:id="@+id/retrofit"
+            android:onClick="retrofit"
             android:layout_height="wrap_content"/>
 
-
-
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_below="@+id/retrofit"
+            android:text="MVVM + Retrofit"
+            android:id="@+id/mvvmRetrofit"
+            android:layout_marginTop="230dp"
+            android:layout_height="wrap_content"/>
 
 
     </RelativeLayout>
