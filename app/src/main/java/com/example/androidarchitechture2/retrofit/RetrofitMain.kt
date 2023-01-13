@@ -2,7 +2,9 @@ package com.example.androidarchitechture2.retrofit
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import android.view.View
+import android.widget.Toast
 import androidx.databinding.DataBindingUtil
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.androidarchitechture2.R
@@ -36,6 +38,9 @@ class RetrofitMain : AppCompatActivity() {
             dataBinding.recyclerView1.hasFixedSize()
             dataBinding.recyclerView1.adapter = adapter
         }
+        else {
+            Toast.makeText(this, "Enter page number between 1 to 130", Toast.LENGTH_SHORT).show()
+        }
 
         dataBinding.submit.setOnClickListener(View.OnClickListener {
             page = dataBinding.page.text.toString().toInt()
@@ -44,6 +49,9 @@ class RetrofitMain : AppCompatActivity() {
                 dataBinding.recyclerView1.layoutManager = LinearLayoutManager(this)
                 dataBinding.recyclerView1.hasFixedSize()
                 dataBinding.recyclerView1.adapter = adapter
+            }
+            else {
+                Toast.makeText(this, "Enter page number between 1 to 130", Toast.LENGTH_SHORT).show()
             }
         })
 

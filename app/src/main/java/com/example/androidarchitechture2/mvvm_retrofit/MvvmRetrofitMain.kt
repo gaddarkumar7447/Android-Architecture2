@@ -8,6 +8,7 @@ import android.widget.Toast
 import androidx.databinding.DataBindingUtil
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.room.Room
 import com.example.androidarchitechture2.R
 import com.example.androidarchitechture2.databinding.ActivityMvvmRetrofitMainBinding
 import com.example.androidarchitechture2.mvvm_retrofit.adapterquotes.AdapaterQuotes
@@ -27,8 +28,8 @@ class MvvmRetrofitMain : AppCompatActivity() {
         supportActionBar?.hide()
 
         var page = 1
-
         val quotesServices = RetrofitHelper.getInstance().create(QuotesServices::class.java)
+
         val repository = RepositoryQuotes(quotesServices)
 
 
@@ -47,6 +48,8 @@ class MvvmRetrofitMain : AppCompatActivity() {
             Toast.makeText(this, "Enter page number between 1 to 130", Toast.LENGTH_SHORT).show()
         }*/
 
+        // val repo = (application as QuoteApplication).quotesRepository
+
         dataBinding.submitButton.setOnClickListener(View.OnClickListener {
             page = dataBinding.pageEnter.text.toString().toInt()
             if (page in 1..130) {
@@ -62,6 +65,7 @@ class MvvmRetrofitMain : AppCompatActivity() {
             }
         })
 
+        // Create databases
 
     }
 }
